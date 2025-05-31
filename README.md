@@ -26,6 +26,7 @@ Please do not use this project or its derived components for any unethical behav
 - 多人遊戲環境中的未經授權自動化操作
 
 
+---
 
 
 # YOLOv4-tiny Object Detection and Auto Combat System for Gersang
@@ -155,7 +156,7 @@ These adjustments aim to create a practical and reusable workflow for real-world
 4. 在 `3_yolo_model_training.ipynb` 中使用 Google Colab 執行訓練
 5. 回到本地執行 `4_yolo_opencv_detector.ipynb` 進行自動刷怪控制
 
-## 技術注意事項
+## 注意事項
 
 - 模型輸入解析度為 416x416（YOLOv4-tiny 預設）
 - 預測框會自動換算回原始視窗的座標空間
