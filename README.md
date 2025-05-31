@@ -35,6 +35,14 @@ This project implements a real-time object detection and automation system for t
 
 The system detects in-game enemies (e.g., skeleton monsters), and automatically performs combat actions such as targeting, pressing keys, and attacking based on model predictions.
 
+---
+
+## 🎥 Demo Video
+
+[![Watch the video](https://img.youtube.com/vi/k_GV45inPjE/0.jpg)](https://youtu.be/k_GV45inPjE)
+
+---
+
 ## Features
 
 - Real-time detection using a custom-trained YOLOv4-tiny model
