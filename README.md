@@ -98,7 +98,7 @@ WindowCapture("Gersang").generate_image_dataset()
 
 ### 4. Model Training
 
-Upload training data to Google Drive and run:
+Upload training data to Google Drive, then run the following command in Google Colab:
 ```bash
 ./darknet detector train data/obj.data cfg/yolov4-tiny-custom.cfg yolov4-tiny.conv.29 -dont_show
 ```
