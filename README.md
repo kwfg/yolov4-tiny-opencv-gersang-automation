@@ -85,6 +85,7 @@ yoho_gm_test/
 ```python
 WindowCapture("Gersang").generate_image_dataset()
 ```
+This will continuously capture images from the game window and save them into the images/ folder.
 
 ### 2. Annotation
 
@@ -187,7 +188,7 @@ These adjustments aim to create a practical and reusable workflow for real-world
 
 ## 專案流程
 
-1. 使用 `1_generate_dataset.ipynb` 擷取遊戲畫面圖片
+1. 使用 1_generate_dataset.ipynb 擷取遊戲畫面圖片（此步驟會持續擷取遊戲畫面並自動儲存至 images/ 資料夾）
 2. 上傳至 makesense.ai 進行標註（例如：bow_skeleton、gun_skeleton）
 3. 使用 `2_label_dataset.ipynb` 自動生成訓練設定檔（obj.names、obj.data、cfg）
 4. 在 `3_yolo_model_training.ipynb` 中使用 Google Colab 執行訓練
