@@ -103,7 +103,36 @@ Upload training data to Google Drive, then run the following command in Google C
 ./darknet detector train data/obj.data cfg/yolov4-tiny-custom.cfg yolov4-tiny.conv.29 -dont_show
 ```
 
-### 5. Detection Execution
+### 5. Export Trained Weights
+
+After training completes in Google Colab, download the generated weights file:
+
+```
+yolov4-tiny-custom_last.weights
+```
+
+Place it in the following directory with your config file:
+
+```
+./yolov4-tiny/
+├── yolov4-tiny-custom.cfg
+
+# yolov4-tiny-custom_last.weights placement options:
+# 1. Place it inside the yolov4-tiny folder (recommended for organization)
+# 2. Place it in the project root directory (e.g., alongside your .py script)
+
+./yolov4-tiny-custom_last.weights
+```
+
+Make sure your detection script is configured like this:
+
+```python
+cfg_file_name = "./yolov4-tiny/yolov4-tiny-custom.cfg"
+weights_file_name = "yolov4-tiny-custom_last.weights"
+window_name = "Gersang"
+```
+
+### 6. Detection Execution
 
 Run `4_yolo_opencv_detector.ipynb` to begin detection and simulate input.
 
@@ -162,7 +191,19 @@ These adjustments aim to create a practical and reusable workflow for real-world
 2. 上傳至 makesense.ai 進行標註（例如：bow_skeleton、gun_skeleton）
 3. 使用 `2_label_dataset.ipynb` 自動生成訓練設定檔（obj.names、obj.data、cfg）
 4. 在 `3_yolo_model_training.ipynb` 中使用 Google Colab 執行訓練
-5. 回到本地執行 `4_yolo_opencv_detector.ipynb` 進行自動刷怪控制
+5. 訓練完成後，下載 `yolov4-tiny-custom_last.weights`。將此檔案放置至 `./yolov4-tiny/`
+   # yolov4-tiny-custom_last.weights 可選放置路徑：
+    # 1. 放在 yolov4-tiny 資料夾內（建議，集中管理）
+    # 2. 放在根目錄（例如：與 .py 程式碼同層）
+7. 確保你的推論程式使用下列設定：
+
+```python
+cfg_file_name = "./yolov4-tiny/yolov4-tiny-custom.cfg"
+weights_file_name = "yolov4-tiny-custom_last.weights"
+window_name = "Gersang"
+```
+
+7. 執行 `4_yolo_opencv_detector.ipynb`，開始即時辨識與完全自動打怪操作
 
 ## 注意事項
 
