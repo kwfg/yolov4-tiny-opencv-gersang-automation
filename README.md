@@ -192,9 +192,10 @@ These adjustments aim to create a practical and reusable workflow for real-world
 3. 使用 `2_label_dataset.ipynb` 自動生成訓練設定檔（obj.names、obj.data、cfg）
 4. 在 `3_yolo_model_training.ipynb` 中使用 Google Colab 執行訓練
 5. 訓練完成後，下載 `yolov4-tiny-custom_last.weights`。將此檔案放置至 `./yolov4-tiny/`
-   # yolov4-tiny-custom_last.weights 可選放置路徑：
-    # 1. 放在 yolov4-tiny 資料夾內（建議，集中管理）
-    # 2. 放在根目錄（例如：與 .py 程式碼同層）
+
+   yolov4-tiny-custom_last.weights 可選放置路徑：
+    1. 放在 yolov4-tiny 資料夾內（集中管理）
+    2. 放在根目錄（例如：與 .py 程式碼同層）
 7. 確保你的推論程式使用下列設定：
 
 ```python
